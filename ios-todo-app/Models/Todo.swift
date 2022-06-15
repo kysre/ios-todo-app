@@ -6,7 +6,7 @@ class Todo: Identifiable{
     var name: String
     var date: Date
     
-    init(id: UUID = UUID(), name: String, date: Date){
+    init(id: UUID = UUID(), name: String = "", date: Date = Date()){
         self.id = id
         self.name = name
         self.date = date
@@ -21,6 +21,8 @@ class Todo: Identifiable{
 extension Todo {
     static let sampleData: [Todo] =
     [
-        Todo(name: "Todo-1", date: Date())
+        Todo(name: "Todo-1", date: Date()),
+        Todo(name: "Todo-2", date: Date()),
+        Todo(name: "Todo-3", date: Date())
     ]
 }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		898C0A202859DAB9009AB246 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898C0A1F2859DAB9009AB246 /* Todo.swift */; };
+		898C0A23285A065D009AB246 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898C0A22285A065D009AB246 /* CardView.swift */; };
+		898C0A25285A08F0009AB246 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898C0A24285A08F0009AB246 /* TrailingIconLabelStyle.swift */; };
+		898C0A27285A0B3D009AB246 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898C0A26285A0B3D009AB246 /* CalendarView.swift */; };
+		898C0A2B285A129D009AB246 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898C0A2A285A129D009AB246 /* AddTodoView.swift */; };
 		89D585DE285149CA00278441 /* ios_todo_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D585DD285149CA00278441 /* ios_todo_appApp.swift */; };
 		89D585E0285149CA00278441 /* TodosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D585DF285149CA00278441 /* TodosView.swift */; };
 		89D585E2285149CB00278441 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D585E1285149CB00278441 /* Assets.xcassets */; };
@@ -36,6 +40,10 @@
 
 /* Begin PBXFileReference section */
 		898C0A1F2859DAB9009AB246 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		898C0A22285A065D009AB246 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		898C0A24285A08F0009AB246 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
+		898C0A26285A0B3D009AB246 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		898C0A2A285A129D009AB246 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 		89D585DA285149CA00278441 /* ios-todo-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-todo-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D585DD285149CA00278441 /* ios_todo_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_todo_appApp.swift; sourceTree = "<group>"; };
 		89D585DF285149CA00278441 /* TodosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosView.swift; sourceTree = "<group>"; };
@@ -77,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				898C0A1F2859DAB9009AB246 /* Todo.swift */,
+				898C0A24285A08F0009AB246 /* TrailingIconLabelStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -107,6 +116,9 @@
 				898C0A212859DB52009AB246 /* Models */,
 				89D585DD285149CA00278441 /* ios_todo_appApp.swift */,
 				89D585DF285149CA00278441 /* TodosView.swift */,
+				898C0A26285A0B3D009AB246 /* CalendarView.swift */,
+				898C0A2A285A129D009AB246 /* AddTodoView.swift */,
+				898C0A22285A065D009AB246 /* CardView.swift */,
 				89D585E1285149CB00278441 /* Assets.xcassets */,
 				89D585E3285149CB00278441 /* Preview Content */,
 			);
@@ -268,8 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				898C0A27285A0B3D009AB246 /* CalendarView.swift in Sources */,
 				89D585E0285149CA00278441 /* TodosView.swift in Sources */,
+				898C0A2B285A129D009AB246 /* AddTodoView.swift in Sources */,
 				898C0A202859DAB9009AB246 /* Todo.swift in Sources */,
+				898C0A23285A065D009AB246 /* CardView.swift in Sources */,
+				898C0A25285A08F0009AB246 /* TrailingIconLabelStyle.swift in Sources */,
 				89D585DE285149CA00278441 /* ios_todo_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ios_todo_appApp: App {
+    @State private var todos = Todo.todos
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                TodosView(todos: $todos)
+            }
         }
     }
 }

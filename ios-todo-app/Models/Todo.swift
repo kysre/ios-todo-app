@@ -1,7 +1,7 @@
 import Foundation
 
 class Todo: Identifiable{
-    static var todos : [Todo] = []
+//    static var todos : [Todo] = []
     var id: UUID
     var name: String
     var date: Date
@@ -10,11 +10,21 @@ class Todo: Identifiable{
         self.id = id
         self.name = name
         self.date = date
-        Todo.todos.append(self)
+//        Todo.todos.append(self)
     }
     
-    static func sort() {
-        todos.sort(by:{$0.date > $1.date})
+    static func getAllTodosByDate(todos: [Todo], date: Date) -> [Todo] {
+        var todosInDate: [Todo] = []
+        for todo in todos {
+            let isDateEquall = Calendar.current.isDate(date, equalTo: todo.date, toGranularity: .day)
+            if isDateEquall {
+                todosInDate.append(todo)
+            }
+        }
+        todosInDate.sort {
+            $0.date.compare($1.date) == .orderedAscending
+        }
+        return todosInDate
     }
 }
 
@@ -23,6 +33,8 @@ extension Todo {
     [
         Todo(name: "Todo-1", date: Date()),
         Todo(name: "Todo-2", date: Date()),
-        Todo(name: "Todo-3", date: Date())
+        Todo(name: "Todo-3", date: Date()),
+        Todo(name: "Todo-4", date: Date()),
+        Todo(name: "Todo-5", date: Date())
     ]
 }

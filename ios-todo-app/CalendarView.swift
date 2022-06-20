@@ -9,12 +9,38 @@ import SwiftUI
 
 struct CalendarView: View {
     @Binding var todos: [Todo]
+    @State var shownTodos: [Todo] = []
+    @State var chosenDate: Date = Date()
+    
+    func deleteTodo(at offsets: IndexSet) {
+        let idsToDelete = offsets.map {
+            shownTodos[$0].id
+        }
+        todos.removeAll(where: { idsToDelete.contains($0.id) })
+        shownTodos.remove(atOffsets: offsets)
+    }
+    
+    func sortTodos(showDate: Date) {
+        shownTodos = Todo.getAllTodosByDate(todos: todos, date: showDate)
+    }
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach($todos) { $todo in
-                    CardView(todo: todo)
+            Form {
+                Section(header: Text("Todos Date")) {
+                    DatePicker("Due Date",
+                               selection: $chosenDate,
+                               displayedComponents: [.date]
+                    )
+                    .onChange(of: chosenDate) { [] newDate in
+                        sortTodos(showDate: newDate)
+                    }
+                }
+                List {
+                    ForEach($shownTodos) { $todo in
+                        CardView(todo: todo)
+                    }
+                    .onDelete(perform: deleteTodo)
                 }
             }
             .navigationTitle("Calendar")
